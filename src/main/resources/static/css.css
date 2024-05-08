@@ -1,0 +1,19 @@
+table {
+    counter-reset: row-counter;
+    border: 1px solid black;
+}
+td,tr,th {
+    border: 1px solid black;
+}
+.counter::before {
+    content: counter(row-counter);
+    counter-increment: row-counter;
+}
+.container{
+    display: flex;
+    position: relative;
+}
+.add-product{
+    position: relative;
+   left: 500px;
+}

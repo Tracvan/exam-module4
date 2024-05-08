@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <link rel="stylesheet" type="text/css" href="/static/css.css">
+</head>
+<body>
+<div class="container">
+    <h3>Product Manager</h3>
+    <form action="/add">
+    <button>Add product</button></a>
+    </form>
+</div>
+<table>
+    <tr>
+        <th>No</th>
+        <th>Select</th>
+        <th>Product's name</th>
+        <th>Starting-Price</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="product : ${productList}">
+        <td class="counter"></td>
+        <td> <input type="checkbox"> </td>
+        <td class="show-product-name" th:text="${product.name}"></td>
+        <td class="show-product-price" th:text="${product.startingPrice}"></td>
+        <td class="show-product-type" th:text="${product.type}"></td>
+        <td class="show-product-status" th:text="${product.status}"></td>
+        <td class="show-product-action"></td>
+    </tr>
+</table>
+</body>
+</html>

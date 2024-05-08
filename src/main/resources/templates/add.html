@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+    <style>
+        .input-field {
+            display: none;
+        }
+
+        select:focus + .input-field {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h3>Add new product</h3>
+<p>Product's name</p>
+<input type="text" name="name">
+<p>Product's price</p>
+<input type="text" name="startingPrice">
+<p>Product's type</p>
+<select id="optionList" name="type" th:each="type : ${typeList}">
+    <option th:text="${type}"></option>
+</select>
+<div class="input-field">
+    <input type="text" id="customOption" name="customOption" placeholder="Nhập option khác">
+</div>
+</body>
+</html>
